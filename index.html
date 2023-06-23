@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br" class='luz'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc</title>
+    <link rel="stylesheet" href="folha.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img src="imagens/light.jpg" alt="light mode" />
+        <p>@Sophia Brito</p>
+      </div>
+      <div id="switch" onclick="toggleMode()"> <!---->
+        <button> </button>
+        <span>  </span>
+
+
+
+
+      </div>
+      <ul>
+        <li>
+          <a href="#">Inscreva-se NLW</a>
+        </li>
+
+        <li>
+          <a href="#">Baixe meu ebook</a>
+        </li>
+
+        <li>
+          <a href="#">Veja meu portifolio</a>
+        </li>
+
+        <li>
+          <a href="https://www.google.com" target="_blank">conheca Discover</a>
+        </li>
+      </ul>
+      <div id="redes">
+        <a href="https://google.com" target="_blank">
+          <ion-icon name="logo-github"></ion-icon
+        ></a>
+
+        <a href="https://google.com" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon
+        ></a>
+
+        <a href="https://google.com" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+
+        <a href="https://google.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        feito com ❤ por <a href="https://google.com" target="_blank">MANDRAGOS</a>
+      </footer>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!--script js-->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--  CODIGO JS PURO P BOTAO TUGGLE
+  
+  function toggleMode() {
+        const html = document.documentElement
+
+        if (html.classList.contains('luz') ) {
+         html.classList.remove('luz')       
+        } else {
+             html.classList.add('luz') 
+        }
+}
+
+
+TODO O CODIGO ACIMA PODE SER RESUMIDO EM :
+
+function toggleMode() {
+        const html = document.documentElement
+
+html.classList.toggle('luz')
+
+}
+-->

@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+/*font-family: 'Inter', sans-serif;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --tc: white;
+  --bg-url:url(imagens/bg-mobile-dark.jpg);
+  --stroke-color:rgba(255, 255, 255, 0.5);
+  --surface-color:rgba(255, 255, 255, 0.5);
+  --surfuce-color-hover:rgba(0, 0, 0, 0.02);
+  --highlight-color:rgba(255, 255, 255, 0.5);
+  --switch-bg-url:url(imagens/lua.svg); 
+}
+.luz{
+  --tc:black;
+  --bg-url:url(imagens/bg-mobile-light.jpg);
+  --stroke-color:rgba(0, 0, 0, 0.5);
+  --surface-color:rgba(0, 0, 0, 0.05);
+  --surfuce-color-hover:rgba(0, 0, 0, 0.02);
+  --highlight-color:rgba(0, 0, 0, 0.1);
+  --switch-bg-url:url(imagens/sol.svg) 
+}
+body {
+  /* background-image: url(imagens/bg-mobile-dark.jpg); 
+   background-repeat: no-repeat;
+   background-position: top center; 
+   background-size: cover; 
+   pode se usar tudo em uma unica linha, antes do cover usar barra
+   ex baixo
+
+   *margin*
+   margin-auto pode usar auto para todos os valores 
+   com 2 valores 50px( up/down) auto( ld/le)
+   com 3 valores 50px(top) auto (ld/le) 20px(down)
+   com 4 valores 10px(top) 11px( ld) 12px(down) 13px(le)
+
+   display block oculpa todoo espaco disponivel, ja o inline ocupa apenas a linha ou 
+   conteudo
+   */
+
+  background: var(--bg-url) no-repeat top center/ cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--tc);
+
+}
+#container {
+  width: 360px;
+  margin: auto; /*alinhando entre esquerda e direita, nao encima nem ebaixo*/
+  margin: 56px auto 0px;
+  padding: 0px 24px;
+}
+/*profile*/
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+#profile img {
+  width: 112px;
+  border-radius: 50%;
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 9px;
+}
+/*links lista*/
+/*gap coloca espaco entre oslementos.
+centralizar text:
+display:flex
+align-items:center no meio
+justfy-content: central
+*/
+
+
+/*switch*/
+#switch{
+  position: relative;
+  width:64px ;
+  margin:4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.luz #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+  display: block;
+  width: 63px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+
+}
+
+
+
+
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  /*abaixo esta um ex. de lista com conteudo trasparente*/
+  background:var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px); /*embacamento do fundo*/
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+ul li a:hover {
+  background: var(--surfuce-color-hover);
+  border: 1.5px solid var(--tc);
+}
+/*icones*/
+#redes {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+#redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#redes a:hover {
+  background: var(--highlight-color);
+}
+footer{
+  padding: 24px 0 ;
+  text-align: center;
+  font-size: 14px;
+}
