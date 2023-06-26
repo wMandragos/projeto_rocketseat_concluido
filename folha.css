@@ -5,23 +5,23 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root{
+:root {
   --tc: white;
-  --bg-url:url(imagens/bg-mobile-dark.jpg);
-  --stroke-color:rgba(255, 255, 255, 0.5);
-  --surface-color:rgba(255, 255, 255, 0.5);
-  --surfuce-color-hover:rgba(0, 0, 0, 0.02);
-  --highlight-color:rgba(255, 255, 255, 0.5);
-  --switch-bg-url:url(imagens/lua.svg); 
+  --bg-url: url(imagens/bg-mobile-dark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.5);
+  --surfuce-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.5);
+  --switch-bg-url: url(imagens/lua.svg);
 }
-.luz{
-  --tc:black;
-  --bg-url:url(imagens/bg-mobile-light.jpg);
-  --stroke-color:rgba(0, 0, 0, 0.5);
-  --surface-color:rgba(0, 0, 0, 0.05);
-  --surfuce-color-hover:rgba(0, 0, 0, 0.02);
-  --highlight-color:rgba(0, 0, 0, 0.1);
-  --switch-bg-url:url(imagens/sol.svg) 
+.luz {
+  --tc: black;
+  --bg-url: url(imagens/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surfuce-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(imagens/sol.svg);
 }
 body {
   /* background-image: url(imagens/bg-mobile-dark.jpg); 
@@ -46,10 +46,10 @@ body {
 body * {
   font-family: "Inter", sans-serif;
   color: var(--tc);
-
 }
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: auto; /*alinhando entre esquerda e direita, nao encima nem ebaixo*/
   margin: 56px auto 0px;
   padding: 0px 24px;
@@ -77,12 +77,11 @@ align-items:center no meio
 justfy-content: central
 */
 
-
 /*switch*/
-#switch{
+#switch {
   position: relative;
-  width:64px ;
-  margin:4px auto;
+  width: 64px;
+  margin: 4px auto;
 }
 #switch button {
   width: 32px;
@@ -97,12 +96,12 @@ justfy-content: central
   transform: translateY(-50%);
   z-index: 1;
 }
-.luz #switch button{
-    right: 0;
-    left: initial;
+.luz #switch button {
+  right: 0;
+  left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 63px;
   height: 24px;
@@ -110,12 +109,7 @@ justfy-content: central
   border: 1px solid var(--stroke-color);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
-
-
-
-
 
 ul {
   list-style: none;
@@ -130,7 +124,7 @@ ul li a {
   justify-content: center;
   padding: 16px 24px;
   /*abaixo esta um ex. de lista com conteudo trasparente*/
-  background:var(--surface-color);
+  background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(4px); /*embacamento do fundo*/
@@ -162,8 +156,8 @@ ul li a:hover {
 #redes a:hover {
   background: var(--highlight-color);
 }
-footer{
-  padding: 24px 0 ;
+footer {
+  padding: 24px 0;
   text-align: center;
   font-size: 14px;
 }
