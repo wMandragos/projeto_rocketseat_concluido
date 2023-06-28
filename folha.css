@@ -30,6 +30,7 @@ body {
    background-size: cover; 
    pode se usar tudo em uma unica linha, antes do cover usar barra
    ex baixo
+   background-image: no-repeat top center / cover...conferir se eh assim mesmo
 
    *margin*
    margin-auto pode usar auto para todos os valores 
@@ -42,15 +43,16 @@ body {
    */
 
   background: var(--bg-url) no-repeat top center/ cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--tc);
 }
 #container {
-  width: 100%;
-  max-width: 588px;
-  margin: auto; /*alinhando entre esquerda e direita, nao encima nem ebaixo*/
+  width: 100%; /*largura da caixa*/
+  max-width: 588px;/*largura  da caixa*/
+  margin: auto; /*alinhando entre esquerda e direita, nem encima nem ebaixo*/
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
@@ -160,4 +162,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+/*media queries*/
+@media (min-width:700px){
+  :root{
+    --bg-url: url(imagens/bgd.jpg);
+  }
+
+  .luz {
+    --bg-url: url(imagens/bgl.jpg);
+  }
 }
