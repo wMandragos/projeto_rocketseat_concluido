@@ -72,7 +72,7 @@ body * {
   margin-top: 9px;
 }
 /*links lista*/
-/*gap coloca espaco entre oslementos.
+/*gap coloca espaco entre os lementos.
 centralizar text:
 display:flex
 align-items:center no meio
@@ -97,10 +97,14 @@ justfy-content: central
   left: 0;
   transform: translateY(-50%);
   z-index: 1;
+
+  animation: slide-back 0.4s;
 }
 .luz #switch button {
-  right: 0;
-  left: initial;
+animation: slide-in 0.4s forwards;
+}
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -163,7 +167,10 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-/*media queries*/
+/*media queries
+adaptabilidade da tela
+*/
+
 @media (min-width:700px){
   :root{
     --bg-url: url(imagens/bgd.jpg);
@@ -171,5 +178,23 @@ footer {
 
   .luz {
     --bg-url: url(imagens/bgl.jpg);
+  }
+}
+
+/*criando animações com @keyframes*/
+
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+
+  to{left: 50%;}
+}
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
   }
 }
